@@ -1,31 +1,20 @@
-***************************************
-Improved Nano Syntax Highlighting Files
-***************************************
+*****************************************************************
+Improved Nano Syntax Highlighting Files For Raspbian-Stretch-Lite
+*****************************************************************
 
 This repository holds ``{lang}.nanorc`` files that have improved
 definitions of syntax highlighting for various languages.
 
-
 1. Copy files
 ~~~~~~
 
-These should be placed inside of the ``~/.nano/`` directory. 
-Or for system-wide installation ``/usr/share/nano-syntax-highlighting/``.
-In other words::
-
-    git clone git@github.com:scopatz/nanorc.git ~/.nano
-
-*Note - if you have any issues (ssh was not properly configured), alternatively use::
-
-    git clone https://github.com/scopatz/nanorc.git ~/.nano
-    
 *System wide will look like so*::
 
-    sudo git clone https://github.com/scopatz/nanorc.git /usr/share/nano-syntax-highlighting/
+    cd /usr/share/nano
+    sudo git remote add origin https://github.com/swoopsta/nanorc.git
+    sudo git fetch
+    sudo git checkout -t origin/master -f
 
-**NOTE**: \< and \> are regular character escapes on macOS. The bug's fixed in Nano, but this might be a problem
-if you are using an older version. If this is the case, replace them respectively with [[:<:]] and [[:>:]].
-This is reported in `issue 52 <https://github.com/scopatz/nanorc/issues/52>`_
 
 2. Configure ``nano``
 ~~~~~~~~~
@@ -40,14 +29,14 @@ You can also append the contents of ``~/.nano/nanorc`` into your
 ``~/.nanorc`` to include all languages::
 
     cat ~/.nano/nanorc >> ~/.nanorc
-    
+
 Or to be less verbose, append content of the folder in one line with wildcard::
 
     ## For all users
-    $ echo "include $install_path/*.nanorc" >> /etc/nanorc 
+    $ echo "include $install_path/*.nanorc" >> /etc/nanorc
     ## For current user
     $ echo "include $install_path/*.nanorc" >> ~/.nanorc
-    
+
 where ``$install_path`` is ``/usr/share/nano-syntax-highlighting`` or ``~/.nano/`` or ...
 
 1a.  Automatic installer
@@ -64,8 +53,8 @@ or alternatively::
     some syntax definitions which exist in Nano upstream may be preferable to the ones provided by this package.
     The install.sh script may be run with ``-l`` or ``--lite`` to insert the included syntax definitions from this package
     with lower precedence than the ones provided by the standard package.
-    
-    
+
+
 1b. Distributive specific installation via package managers
 ~~~~~~~~~~
 On **Arch Linux** and other *pacman/aur* based systems it is possible to::
