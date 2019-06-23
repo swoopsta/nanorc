@@ -23,9 +23,9 @@ color magenta   "\\([btnfr]|'|\"|\\)"
 color magenta   "\\u[A-Fa-f0-9]{4}"
 
 # Comments
-color brightblack "(^|[[:space:]])//.*"
-color brightblack start="/\*" end="\*/"
-color brightblack start="\(\*" end="\*\)"
+color brightblue "(^|[[:space:]])//.*"
+color brightblue start="/\*" end="\*/"
+color brightblue start="\(\*" end="\*\)"
 color brightwhite,cyan "TODO:?"
 
 color ,green "[[:space:]]+$"
