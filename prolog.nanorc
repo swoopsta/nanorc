@@ -20,7 +20,7 @@ color yellow "(^|[[:blank:]]|\(|,)_($|[[:blank:]]|,|\))"
 color cyan "(^|[[:blank:]])\w+\("
 color white "\(|\)|\[|\]|,|=|\\="
 
-# Atoms
+# Atom
 color green start="\"" end="\""
 color green start="'" end="'"
 
