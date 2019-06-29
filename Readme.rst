@@ -11,6 +11,7 @@ definitions of syntax highlighting for various languages.
 *System wide will look like so*::
 
     cd /usr/share/nano
+    git init
     sudo git remote add origin https://github.com/swoopsta/nanorc.git
     sudo git fetch
     sudo git checkout -t origin/master -f
@@ -42,7 +43,7 @@ where ``$install_path`` is ``/usr/share/nano-syntax-highlighting`` or ``~/.nano/
 1a.  Automatic installer
 ~~~~~~~~~~~~~~~~~~~~~~
 Finally, you can run an automatic installer using the following code::
-
+c
     $ curl https://raw.githubusercontent.com/scopatz/nanorc/master/install.sh | sh
 
 or alternatively::
